@@ -1,5 +1,6 @@
 import streamlit as st
-import pandas as pdfrom sklearn.preprocessing import LabelEncoder
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
