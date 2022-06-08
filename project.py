@@ -29,14 +29,17 @@ st.write(df)
 
 data = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assignment-AAA/main/IRIS.csv', sep=',',skipinitialspace=True)
 
-labelencoder = LabelEncoder()
-data['species']= labelencoder.fit_transform(data['species'])
+#labelencoder = LabelEncoder()
+#data['species']= labelencoder.fit_transform(data['species'])
 
-data.head()
+#data.head()
 
-X= features.drop('label',axis=1)
+#X= features.drop('label',axis=1)
 
-y= features['label']
+#y= features['label']
+
+X= pd.DataFrame(data['features'])
+y = data['species']
 
 Xtrain, Xtest, ytrain, ytest = train_test_split(X, y,
                                                 test_size = 0.2,
