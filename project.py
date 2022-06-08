@@ -34,9 +34,9 @@ data['species']= labelencoder.fit_transform(data['species'])
 
 data.head()
 
-X= features.drop('df',axis=1)
+X= features.drop('data',axis=1)
 
-y= features['df']
+y= features['data']
 
 #X= pd.DataFrame(data['features'])
 #y = data['species']
