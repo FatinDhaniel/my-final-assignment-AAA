@@ -28,10 +28,10 @@ st.subheader('User Input parameters')
 st.write(df)
 
 iris = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assignment-AAA/main/IRIS.csv')
-X = df.drop('label', axis =1 )
+X = iris.drop('label', axis =1 )
 X. head()
 
-y= df['label']
+y= iris['label']
 y.head()
 #X = iris.data
 #Y = iris.target
