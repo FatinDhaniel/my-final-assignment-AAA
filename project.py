@@ -32,7 +32,7 @@ data = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assi
 labelencoder = LabelEncoder()
 data['species']= labelencoder.fit_transform(data['species'])
 
-data.head()
+#data.head()
 
 X= features.drop('data',axis=1)
 
