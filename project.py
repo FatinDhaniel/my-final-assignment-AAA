@@ -34,9 +34,9 @@ data['species']= labelencoder.fit_transform(data['species'])
 
 data.head()
 
-X= data.drop('label',axis=1)
+X= df.drop('label',axis=1)
 
-y= data['label']
+y= df['label']
 
 Xtrain, Xtest, ytrain, ytest = train_test_split(X, y,
                                                 test_size = 0.2,
