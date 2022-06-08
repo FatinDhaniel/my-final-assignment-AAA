@@ -1,6 +1,5 @@
 import streamlit as st
-import pandas as pd
-
+import pandas as pdfrom sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
@@ -28,22 +27,33 @@ st.subheader('User Input parameters')
 st.write(df)
 
 iris = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assignment-AAA/main/IRIS.csv')
-X = df.drop('label', axis =1 )
+data = pd.read_table('churn.txt', index_col=False,  sep=',',skipinitialspace=True)
 
+labelencoder = LabelEncoder()
+data['iris']= labelencoder.fit_transform(data['iris'])
 
-y= df['label']
+data.head()
+
+X= data.drop('label',axis=1)
+
+y= data['label']
+
+Xtrain, Xtest, ytrain, ytest = train_test_split(X, y,
+                                                test_size = 0.2,
+                                                random_state = 999)
+
 
 #X = iris.data
 #Y = iris.target
 
 clf = RandomForestClassifier()
-clf.fit(X, Y)
+clf.fit(X, y)
 
 prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
-st.write(iris.target_names)['setosa','versicolor','virginica']
+st.write(iris.target_names['setosa','versicolor','virginica'])
 
 st.subheader('Prediction')
 st.write(iris.target_names[prediction])
