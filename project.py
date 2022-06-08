@@ -30,7 +30,7 @@ st.write(df)
 data = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assignment-AAA/main/IRIS.csv', sep=',',skipinitialspace=True)
 
 labelencoder = LabelEncoder()
-data['iris']= labelencoder.fit_transform(data['iris'])
+data['species']= labelencoder.fit_transform(data['species'])
 
 data.head()
 
