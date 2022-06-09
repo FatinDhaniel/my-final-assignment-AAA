@@ -30,7 +30,7 @@ st.write(df)
 data = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assignment-AAA/main/IRIS.csv', sep=',',skipinitialspace=True)
 
 np.random.seed(151)  
-df2 = pd.DataFrame(np.random.randn(151),index = list([:]), columns = list('sepel_lenghth','sepel_width','petel lenghth','petel width','species'))
+df2 = pd.DataFrame(np.random.randn(151),index = list(), columns = list('sepel_lenghth','sepel_width','petel lenghth','petel width','species'))
 #data =['Sepel lenght']+['sepel width']+['petel length']+['petel width'] +['species']
 
 #X=data.drop('species',axis=1)
