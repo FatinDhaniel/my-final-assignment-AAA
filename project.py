@@ -31,7 +31,7 @@ data = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assi
 df2 =['Sepel lenght']+['sepel width']+['petel length']+['petel width'] +['species']
 
 X=df.drop('species',axis=1)
-y=df('species)
+y=df('species')
 
 
 
