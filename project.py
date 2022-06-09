@@ -29,7 +29,7 @@ def user_input_features():
      #st.write('The current number is ',number)
      petal_lenght = st.sidebar.number_input('Insert Petal lenght',1.0,6.9,1.3)
      #st.write('The current number is ',number)
-     petal_width = st.sidebar.number_input('Insert Petal width'0.1,2.5,0.2)
+     petal_width = st.sidebar.number_input('Insert Petal width',0.1,2.5,0.2)
      #st.write('The current number is ',number)
      
      data = {'sepal_length' : sepal_length,
