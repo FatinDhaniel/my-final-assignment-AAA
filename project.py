@@ -46,7 +46,7 @@ st.write['setosa','versicolor','virginica']
 
 st.subheader('Prediction')
 st.write(['setosa','versicolor','virginica'][prediction]
-st.write(prediction)
+#st.write(prediction)
 
-#st.subheader('Prediction Probability')
+st.subheader('Prediction Probability')
 st.write(prediction_proba)
