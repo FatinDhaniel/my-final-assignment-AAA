@@ -28,11 +28,17 @@ st.subheader('User Input parameters')
 st.write(df)
 
 data = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assignment-AAA/main/IRIS.csv', sep=',',skipinitialspace=True)
+df2 =['Sepel lenght']+['sepel width']+['petel length']+['petel width'] +['species']
 
-df2 = pd.DataFrame(np.random.randn(8, 4), index=datas, columns=['Sepel length', 'Sepel width', 'Petel lenght', 'Petel width','species'])
+X=df.drop('species',axis=1)
+y=df('species)
 
-X = df2.drop('species',axis=1)
-Y= df('species')
+
+
+#df2 = pd.DataFrame(np.random.randn(8, 4), index=datas, columns=['Sepel length', 'Sepel width', 'Petel lenght', 'Petel width','species'])
+
+#X = df2.drop('species',axis=1)
+#Y= df('species')
 
 
 
