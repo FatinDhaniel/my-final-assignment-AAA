@@ -47,10 +47,10 @@ prediction_proba = clf.predict_proba(df)
 st.subheader('Class labels and their corresponding index number')
 list = ['setosa','versicolor','virginica']
 ser =pd.Series(list)
-st.write('iris.target_names')
+st.write(ser)
 
 st.subheader('Prediction')
-st.write(iris.target_names[prediction])
+st.write(ser[prediction])
 st.write(prediction)
 
 st.subheader('Prediction Probability')
