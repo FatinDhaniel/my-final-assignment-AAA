@@ -21,7 +21,7 @@ This app predicts the **Iris flower** type!
             #'petal_width': petal_width}
     #features = pd.DataFrame(data, index=[0])
     #return features
-st.sidebar.header('User Input Parameter)
+st.sidebar.header('User Input Parameter')
 def user_input_features():
      sepal_lenght = st.sidebar.number_input('Insert Sepel lenght',4.3,7.9,5.4)
    
