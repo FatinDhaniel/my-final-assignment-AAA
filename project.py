@@ -28,10 +28,10 @@ st.subheader('User Input parameters')
 st.write(df)
 
 data = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assignment-AAA/main/IRIS.csv', sep=',',skipinitialspace=True)
-df2 =['Sepel lenght']+['sepel width']+['petel length']+['petel width'] +['species']
+data =['Sepel lenght']+['sepel width']+['petel length']+['petel width'] +['species']
 
-X=df2.drop('species',axis=1)
-y=df2('species')
+X=data.drop('species',axis=1)
+y=data('species')
 
 
 
