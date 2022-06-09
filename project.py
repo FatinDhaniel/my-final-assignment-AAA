@@ -41,8 +41,13 @@ clf.fit(X, y)
 prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
+#data = np.array(['g','e','e','k','s']) 
+#ser = pd.Series(data)
+
 st.subheader('Class labels and their corresponding index number')
-st.write['setosa','versicolor','virginica']
+data=np.array(['setosa','versicolor','virginica')]
+ser = pd.Series(data)
+#st.write['setosa','versicolor','virginica']
 
 st.subheader('Prediction')
 st.write['setosa','versicolor','virginica'][prediction]
