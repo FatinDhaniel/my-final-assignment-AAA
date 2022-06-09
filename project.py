@@ -16,9 +16,9 @@ This app predicts the **Iris flower** type!
     #petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
     #petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
     #data = {'sepal_length': sepal_length,
-            'sepal_width': sepal_width,
-            'petal_length': petal_length,
-            'petal_width': petal_width}
+            #'sepal_width': sepal_width,
+            #'petal_length': petal_length,
+            #'petal_width': petal_width}
     #features = pd.DataFrame(data, index=[0])
     #return features
 
