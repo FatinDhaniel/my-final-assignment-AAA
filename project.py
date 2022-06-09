@@ -30,14 +30,14 @@ st.write(df)
 data = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assignment-AAA/main/IRIS.csv', sep=',',skipinitialspace=True)
 df2 =['Sepel lenght']+['sepel width']+['petel length']+['petel width'] +['species']
 
-X=df.drop('species',axis=1)
+X=df.drop('species',axis=0)
 y=df('species')
 
 
 
 #df2 = pd.DataFrame(np.random.randn(8, 4), index=datas, columns=['Sepel length', 'Sepel width', 'Petel lenght', 'Petel width','species'])
 
-#X = df2.drop('species',axis=1)
+#X = df2.drop('species',axis=)
 #Y= df('species')
 
 
