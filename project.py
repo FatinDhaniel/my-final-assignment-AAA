@@ -9,34 +9,34 @@ This app predicts the **Iris flower** type!
 """)
 
 
-#st.sidebar.header('User Input Parameters')
-#def user_input_features():
-    #sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4)
-    #sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
-    #petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
-    #petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
-    #data = {'sepal_length': sepal_length,
-            #'sepal_width': sepal_width,
-            #'petal_length': petal_length,
-            #'petal_width': petal_width}
-    #features = pd.DataFrame(data, index=[0])
-    #return features
 st.sidebar.header('User Input Parameters')
 def user_input_features():
-     sepal_lenght = st.sidebar.number_input('Insert Sepel lenght',4.3,7.9,5.4)
+    sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4)
+    sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
+    petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
+    petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
+    data = {'sepal_length': sepal_length,
+            'sepal_width': sepal_width,
+            'petal_length': petal_length,
+            'petal_width': petal_width}
+    features = pd.DataFrame(data, index=[0])
+    return features
+#st.sidebar.header('User Input Parameters')
+#def user_input_features():
+    # sepal_lenght = st.sidebar.number_input('Insert Sepel lenght',4.3,7.9,5.4)
    
-     sepal_width = st.sidebar.number_input('Insert Sepel width',2.0,4.4,3.4)
+    # sepal_width = st.sidebar.number_input('Insert Sepel width',2.0,4.4,3.4)
      
-     petal_lenght = st.sidebar.number_input('Insert Petal lenght',1.0,6.9,1.3)
+    # petal_lenght = st.sidebar.number_input('Insert Petal lenght',1.0,6.9,1.3)
      
-     petal_width = st.sidebar.number_input('Insert Petal width',0.1,2.5,0.2)
+     #petal_width = st.sidebar.number_input('Insert Petal width',0.1,2.5,0.2)
        
-     data = {'Insert Sepal_length' : sepal_length,
-             'Insert Sepal_width' : sepal_width,
-             'Insert Petal_lenght' : petal_length,
-             'Insert Petal_width' : petal_width }
-     features = pd.DataFrame(data , index =[0])
-     return features
+     #data = {'Insert Sepal_length' : sepal_length,
+             #'Insert Sepal_width' : sepal_width,
+             #'Insert Petal_lenght' : petal_length,
+             #'Insert Petal_width' : petal_width }
+     #features = pd.DataFrame(data , index =[0])
+     #return features
      
      #number = st.number_input('Insert a number')
      #st.write('The current number is ', number)
