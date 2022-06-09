@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder
+#from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 
 st.write("""
@@ -28,10 +28,13 @@ st.subheader('User Input parameters')
 st.write(df)
 
 data = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assignment-AAA/main/IRIS.csv', sep=',',skipinitialspace=True)
-data =['Sepel lenght']+['sepel width']+['petel length']+['petel width'] +['species']
 
-X=data.drop('species',axis=1)
-y=data('species')
+np.random.seed(151)  
+df2 = pd.DataFrame(np.random.randn(151),index = list([:]), columns = list('sepel_lenghth','sepel_width','petel lenghth','petel width','species'))
+#data =['Sepel lenght']+['sepel width']+['petel length']+['petel width'] +['species']
+
+#X=data.drop('species',axis=1)
+#y=data('species')
 
 
 
