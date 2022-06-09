@@ -29,33 +29,13 @@ st.write(df)
 
 data = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assignment-AAA/main/IRIS.csv', sep=',',skipinitialspace=True)
 
-#np.random.seed(151)  
-#df2 = pd.DataFrame(np.random.randn(151),index = list(), columns = list('sepel_lenghth','sepel_width','petel lenghth','petel width','species'))
-#data =['Sepel lenght']+['sepel width']+['petel length']+['petel width'] +['species']
 
 X=data.drop('species',axis=1)
 y=data['species']
 
 
 
-#df2 = pd.DataFrame(np.random.randn(8, 4), index=datas, columns=['Sepel length', 'Sepel width', 'Petel lenght', 'Petel width','species'])
 
-#X = df2.drop('species',axis=)
-#Y= df('species')
-
-
-
-#labelencoder = LabelEncoder()
-#data['species']= labelencoder.fit_transform(data['species'])
-
-#data.head()
-
-#3X= features.drop('label',axis=1)
-
-#y= features['data']
-
-#X= pd.DataFrame(data['features'])
-#y = data['species']
 
 
 #X = iris.data
@@ -68,7 +48,7 @@ prediction = clf.predict(df)
 #prediction_proba = clf.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
-st.write['setosa','versicolor','virginica']
+st.write(iris.target_names['setosa','versicolor','virginica'])
 
 st.subheader('Prediction')
 st.write(iris.target_names[prediction])
