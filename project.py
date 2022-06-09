@@ -21,7 +21,25 @@ def user_input_features():
             'petal_width': petal_width}
     features = pd.DataFrame(data, index=[0])
     return features
+    
+    uploaded_file = st.file_uploader("Choose a file")
+    if uploaded_file is not None:
+     # To read file as bytes:
+      bytes_data = uploaded_file.getvalue()
+      st.write(bytes_data)
 
+     # To convert to a string based IO:
+      stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+      st.write(stringio)
+
+     # To read file as string:
+      string_data = stringio.read()
+      st.write(string_data)
+
+     # Can be used wherever a "file-like" object is accepted:
+      dataframe = pd.read_csv(uploaded_file)
+      st.write(dataframe)
+    
 df = user_input_features()
 
 st.subheader('User Input parameters')
@@ -55,22 +73,6 @@ st.write(prediction)
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
 
-uploaded_file = st.file_uploader("Choose a file")
-if uploaded_file is not None:
-     # To read file as bytes:
-     bytes_data = uploaded_file.getvalue()
-     st.write(bytes_data)
 
-     # To convert to a string based IO:
-     stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
-     st.write(stringio)
-
-     # To read file as string:
-     string_data = stringio.read()
-     st.write(string_data)
-
-     # Can be used wherever a "file-like" object is accepted:
-     dataframe = pd.read_csv(uploaded_file)
-     st.write(dataframe)
 
 
