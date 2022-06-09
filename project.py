@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
+
 st.write("""
 # Simple Iris Flower Prediction App
 This app predicts the **Iris flower** type!
@@ -32,8 +33,7 @@ data = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assi
 X=data.drop('species',axis=1)
 y=data['species']
 
-#X = iris.data
-#Y = iris.target
+
 
 clf = RandomForestClassifier()
 clf.fit(X, y)
@@ -41,8 +41,7 @@ clf.fit(X, y)
 prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
-#data = np.array(['g','e','e','k','s']) 
-#ser = pd.Series(data)
+
 
 st.subheader('Class labels and their corresponding index number')
 list = ['setosa','versicolor','virginica']
@@ -55,3 +54,23 @@ st.write(prediction)
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)
+
+uploaded_file = st.file_uploader("Choose a file")
+if uploaded_file is not None:
+     # To read file as bytes:
+     bytes_data = uploaded_file.getvalue()
+     st.write(bytes_data)
+
+     # To convert to a string based IO:
+     stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+     st.write(stringio)
+
+     # To read file as string:
+     string_data = stringio.read()
+     st.write(string_data)
+
+     # Can be used wherever a "file-like" object is accepted:
+     dataframe = pd.read_csv(uploaded_file)
+     st.write(dataframe)
+
+
