@@ -45,8 +45,8 @@ prediction_proba = clf.predict_proba(df)
 #ser = pd.Series(data)
 
 st.subheader('Class labels and their corresponding index number')
-data=np.array(['setosa','versicolor','virginica'])
-ser = pd.Series(data)
+list = ['setosa','versicolor','virginica']
+ser =pd.Series(list)
 #st.write['setosa','versicolor','virginica']
 
 st.subheader('Prediction')
