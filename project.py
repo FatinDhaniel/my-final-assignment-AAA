@@ -7,39 +7,33 @@ st.write("""
 # Simple Iris Flower Prediction App
 This app predicts the **Iris flower** type!
 """)
-st.header('Upload file to predict Iris flower')
-#uploaded_file = st.file_uploader("Choose a file")
-#if uploaded_file is not None:
-     
-    # Can be used wherever a "file-like" object is accepted:
-   #dataframe = pd.read_csv(uploaded_file)
-   #st.write(dataframe)
 
-st.sidebar.header('User Input Parameters')
-def user_input_features():
-    sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4)
-    sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
-    petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
-    petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
-    data = {'sepal_length': sepal_length,
+
+#st.sidebar.header('User Input Parameters')
+#def user_input_features():
+    #sepal_length = st.sidebar.slider('Sepal length', 4.3, 7.9, 5.4)
+    #sepal_width = st.sidebar.slider('Sepal width', 2.0, 4.4, 3.4)
+    #petal_length = st.sidebar.slider('Petal length', 1.0, 6.9, 1.3)
+    #petal_width = st.sidebar.slider('Petal width', 0.1, 2.5, 0.2)
+    #data = {'sepal_length': sepal_length,
             'sepal_width': sepal_width,
             'petal_length': petal_length,
             'petal_width': petal_width}
-    features = pd.DataFrame(data, index=[0])
-    return features
+    #features = pd.DataFrame(data, index=[0])
+    #return features
 
-def user_input_feature():
-     sepel_lenght = st.sidebar.number_input('Insert sepel lenght')
+def user_input_features():
+     sepal_lenght = st.sidebar.number_input('Insert sepel lenght')
      st.write('The current number is ',number)
-     sepel_width = st.sidebar.number_input('Insert sepel width')
+     sepal_width = st.sidebar.number_input('Insert sepel width')
      st.write('The current number is ',number)
      petal_lenght = st.sidebar.number_input('Insert petal lenght')
      st.write('The current number is ',number)
      petal_width = st.sidebar.number_input('Insert petal width')
      st.write('The current number is ',number)
      
-     data = {'sepel_length' : sepal_length,
-             'sepel_width' : sepel_width,
+     data = {'sepal_length' : sepal_length,
+             'sepal_width' : sepal_width,
              'petal_lenght' : petal_length,
              'petal_width' : petal_width,}
      features = pd.DataFrame(data, index =[0])
