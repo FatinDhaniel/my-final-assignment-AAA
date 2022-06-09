@@ -50,7 +50,7 @@ ser =pd.Series(list)
 st.write('iris.target_names')
 
 st.subheader('Prediction')
-st.write['setosa','versicolor','virginica'][prediction]
+st.write('iris.target_names[prediction])
 st.write(prediction)
 
 st.subheader('Prediction Probability')
