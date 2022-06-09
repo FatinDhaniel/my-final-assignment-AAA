@@ -23,13 +23,13 @@ This app predicts the **Iris flower** type!
     #return features
 
 def user_input_features():
-     sepal_lenght = st.sidebar.number_input('Insert sepel lenght')
+     sepal_lenght = st.sidebar.number_input('Insert Sepel lenght',4.3,7.9,5.4)
      #st.write('The current number is ',number)
-     sepal_width = st.sidebar.number_input('Insert sepel width')
+     sepal_width = st.sidebar.number_input('Insert Sepel width',2.0,4.4,3.4)
      #st.write('The current number is ',number)
-     petal_lenght = st.sidebar.number_input('Insert petal lenght')
+     petal_lenght = st.sidebar.number_input('Insert Petal lenght',1.0,6.9,1.3)
      #st.write('The current number is ',number)
-     petal_width = st.sidebar.number_input('Insert petal width')
+     petal_width = st.sidebar.number_input('Insert Petal width'0.1,2.5,0.2)
      #st.write('The current number is ',number)
      
      data = {'sepal_length' : sepal_length,
