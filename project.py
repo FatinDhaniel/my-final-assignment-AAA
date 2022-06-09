@@ -8,12 +8,12 @@ st.write("""
 This app predicts the **Iris flower** type!
 """)
 st.header('Upload file to predict Iris flower')
-uploaded_file = st.file_uploader("Choose a file")
-if uploaded_file is not None:
+#uploaded_file = st.file_uploader("Choose a file")
+#if uploaded_file is not None:
      
     # Can be used wherever a "file-like" object is accepted:
-   dataframe = pd.read_csv(uploaded_file)
-   st.write(dataframe)
+   #dataframe = pd.read_csv(uploaded_file)
+   #st.write(dataframe)
 
 st.sidebar.header('User Input Parameters')
 def user_input_features():
@@ -27,6 +27,26 @@ def user_input_features():
             'petal_width': petal_width}
     features = pd.DataFrame(data, index=[0])
     return features
+
+def user_input_feature():
+     sepel_lenght = st.sidebar.number_input('Insert sepel lenght')
+     st.write('The current number is ',number)
+     sepel_width = st.sidebar.number_input('Insert sepel width')
+     st.write('The current number is ',number)
+     petal_lenght = st.sidebar.number_input('Insert petal lenght')
+     st.write('The current number is ',number)
+     petal_width = st.sidebar.number_input('Insert petal width')
+     st.write('The current number is ',number)
+     
+     data = {'sepel_length' : sepal_length,
+             'sepel_width' : sepel_width,
+             'petal_lenght' : petal_length,
+             'petal_width' : petal_width,}
+     features = pd.DataFrame(data, index =[0])
+     return features
+     
+     #number = st.number_input('Insert a number')
+     #st.write('The current number is ', number)
     
  
     
