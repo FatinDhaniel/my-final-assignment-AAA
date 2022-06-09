@@ -50,7 +50,7 @@ ser =pd.Series(list)
 st.write(ser)
 
 st.subheader('Prediction')
-st.write(ser[prediction])
+#st.write(ser[prediction])
 st.write(prediction)
 
 st.subheader('Prediction Probability')
