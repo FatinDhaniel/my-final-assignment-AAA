@@ -29,21 +29,24 @@ st.write(df)
 
 data = pd.read_csv('https://raw.githubusercontent.com/FatinDhaniel/my-final-assignment-AAA/main/IRIS.csv', sep=',',skipinitialspace=True)
 
-labelencoder = LabelEncoder()
-data['species']= labelencoder.fit_transform(data['species'])
+df2 = pd.DataFrame(np.random.randn(8, 4), index=datas, columns=['Sepel length', 'Sepel width', 'Petel lenght', 'Petel width','species'])
+
+X = df2.drop('species',axis=1)
+Y= df('species')
+
+
+
+#labelencoder = LabelEncoder()
+#data['species']= labelencoder.fit_transform(data['species'])
 
 #data.head()
 
-X= features.drop('',axis=1)
+#3X= features.drop('label',axis=1)
 
-y= features['data']
+#y= features['data']
 
 #X= pd.DataFrame(data['features'])
 #y = data['species']
-
-Xtrain, Xtest, ytrain, ytest = train_test_split(X, y,
-                                                test_size = 0.2,
-                                                random_state = 999)
 
 
 #X = iris.data
@@ -53,10 +56,10 @@ clf = RandomForestClassifier()
 clf.fit(X, y)
 
 prediction = clf.predict(df)
-prediction_proba = clf.predict_proba(df)
+#prediction_proba = clf.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
-st.write(iris.target_names['setosa','versicolor','virginica'])
+st.write['setosa','versicolor','virginica']
 
 st.subheader('Prediction')
 st.write(iris.target_names[prediction])
